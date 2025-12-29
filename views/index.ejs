@@ -8,6 +8,7 @@
             <% activities.forEach( (activity) => { %>
                 <li> <%= activity.name %> <%= activity.money %></li>
             <% } ) %>
+            <h2>Donate</h2>
             <form method="post" action="/activities/donate">
                 <input placeholder="your name" type="text" name="userName">
                 <input placeholder="your password" type="text" name="password">
@@ -18,6 +19,12 @@
                 </select>
                 <input placeholder="money to donate" type="number" name="money">
                 <button type="submit">Donate</button>
+            </form>
+            <h2>Check user money</h2>
+            <form method="post" action="/users/check">
+                <input placeholder="your name" type="text" name="userName">
+                <input placeholder="your password" type="text" name="password">
+                <button type="submit">Check</button>
             </form>
         </main>
     </body>
